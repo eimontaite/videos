@@ -22,15 +22,19 @@ class VideoCard extends React.Component {
     }
 
     render() {
-        const { description, snippet } = this.props.video;
+        const { description, snippet, id } = this.props.video;
+        const url = "https://www.youtube.com/watch?v=".concat(id.videoId);
         
+        console.log(url)
         return (
             <div style={{ gridRowEnd: `span ${this.state.spans}` }}>
-                <img 
+                <a href={url} target="_blank"> 
+                    <img 
                     ref={this.imageRef}
                     alt={description} 
                     src={snippet.thumbnails.default.url} />
                     <p>{snippet.title}</p>
+                </a>
             </div>
         )
     }
