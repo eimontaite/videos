@@ -9,8 +9,8 @@ class VideoCard extends React.Component {
                 <img 
                     alt={description} 
                     src={thumbnails.defaul.url} />
+                    <p>{title}</p>
             </div>
-            <div>{title}</div>
         )
     }
 }
