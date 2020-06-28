@@ -25,7 +25,6 @@ class VideoCard extends React.Component {
         const { description, snippet, id } = this.props.video;
         const url = "https://www.youtube.com/watch?v=".concat(id.videoId);
         
-        console.log(url)
         return (
             <div style={{ gridRowEnd: `span ${this.state.spans}` }}>
                 <a href={url} target="_blank"> 
