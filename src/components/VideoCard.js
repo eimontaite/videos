@@ -1,17 +1,18 @@
 import React from 'react';
 
-class ImageCard extends React.Component {
+class VideoCard extends React.Component {
     render() {
-        const { description, urls } = this.props.video;
+        const { description, title, thumbnails } = this.props.video;
         
         return (
             <div>
                 <img 
                     alt={description} 
-                    src={urls.regular} />
+                    src={thumbnails.defaul.url} />
             </div>
+            <div>{title}</div>
         )
     }
 }
 
-export default ImageCard;
+export default VideoCard;
